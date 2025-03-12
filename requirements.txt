@@ -1,0 +1,8 @@
+requests==2.32.3
+google-cloud-storage==2.7.0
+google-auth==2.16.0
+pandas==2.2.3
+pytest==8.3.4
+python-dotenv==1.0.1
+build==1.2.2.post1 # for building our package
+twine==6.1.0 # for uploading the package to GCP Artifact Registry
