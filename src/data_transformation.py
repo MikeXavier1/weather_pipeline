@@ -9,12 +9,12 @@ logger = logging.getLogger(__name__)
 
 
 # Load configuration
-with open('config/config/json', 'r') as config_file:
+with open('config/config.json', 'r') as config_file:
     config = json.load(config_file)
 
 COLUMNS_TO_IGNORE = config['columns_to_ignore']
 
-def tranform_data(data):
+def transform_data(data: dict):
     if not data:
         return None
     

@@ -4,7 +4,7 @@ from google.cloud import storage
 from datetime import datetime
 
 from data_collection import fetch_weather_data
-from data_transformation import tranform_data
+from data_transformation import transform_data
 from utils import export_to_cloud_storage
 
 # Set up logging
@@ -22,10 +22,10 @@ def main():
     logger.info("Starting weather data collection and export processs")
     all_data = []
     for city in CITIES:
-        logger.debug(F"Fetching weather data for {city}")
+        logger.debug(f"Fetching weather data for {city}")
         raw_data = fetch_weather_data(city)
         if raw_data:
-            transformed_data = tranform_data(raw_data)
+            transformed_data = transform_data(raw_data)
             if transformed_data:
                 all_data.append(transformed_data)
             
