@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch, MagicMock
 from src.data_collection import fetch_weather_data
-from src.data_transformation import tranform_data
+from src.data_transformation import transform_data
 from src.utils import export_to_cloud_storage
 
 # --- Fixtures ---
