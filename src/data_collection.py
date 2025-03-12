@@ -24,7 +24,7 @@ def fetch_weather_data(city):
         
         logging.info(f"Weather data for {city}: {response.json()}")
 
-        return response.json
+        return response.json()
     
     except requests.RequestException as e:
         logger.error(f"Error fetching data for {city}: {e}")

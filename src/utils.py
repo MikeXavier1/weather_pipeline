@@ -12,10 +12,10 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s- %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-def get_storeage_client():
+def get_storage_client():
     try:
         # Path to the GCP JSON credentials file
-        credentials_path = 'C:\Users\mike-\OneDrive\projects\data_engeneering\data_weather_project\gcp_credential.json'
+        credentials_path = 'C:\\Users\\mike-\\OneDrive\\projects\\data_engeneering\\data_weather_project\\gcp_credential.json'
 
         with open(credentials_path, 'r') as f:
             json_credentials = json.load(f)
@@ -42,7 +42,7 @@ def export_to_cloud_storage(data, bucket_name, blob_name):
         df.to_csv(csv_buffer, index=False)
 
         # Initialize Google Cloud Storage client
-        storage_client = get_storeage_client()
+        storage_client = get_storage_client()
         bucket = storage_client.bucket(bucket_name)
         blob = bucket.blob(blob_name + '.csv')
 
